@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color : #8F00FF;
+    --btns-backcolor: linear-gradient(326deg, rgba(255, 255, 255, 0.724) 1%, rgba(143,0,255,1) 100%);
+    --secondary-color : #FFFFFF;
+    --secondary-text : 'Josefin Sans'
+}
+body{
+    font-family: 'poppins';
+    width: 100%;
+    background-color: black;
+    overflow-x: hidden;
+}
+/* header */
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(/images/Hero\ Background\ Image.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+header nav{
+    background-color: rgba(0, 0, 0, 0.11);
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    z-index: 100;
+}
+header nav .logo{
+    width: 400px;
+    display: grid;
+    place-content: center;
+}
+header nav ul{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li{
+    margin: 0px 20px;
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+header .hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero h1{
+    color: var(--secondary-color);
+    font-size: 80px;
+    text-align: center;
+    font-family: var(--secondary-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.hero h5{
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.hero .btns{
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;   
+    height: 8vh;
+}
+.hero .btns a{
+    margin: 0 20px;
+    width: 140px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border: 2px solid var(--main-color);
+}
+.hero .btns a:nth-child(1){
+    background: var(--btns-backcolor);
+    border: none;
+}
+/* about */
+.about{
+    width: 100%;
+    height: 120vh;
+    display: grid;
+    place-content: center;
+}
+.txt1, .txt2{
+    position: absolute;
+    width: 300px;
+    height: 550px;
+}
+.txt1{
+    left: 870px;
+    top: 870px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.txt1 h1{
+    font-size: 70px;
+    font-family: var(--secondary-text);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+.txt1 .icons{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    img{
+        width: 80px;
+    }
+}
+
+.txt2{
+    left: 300px;
+    top: 1200px;
+    width: 360px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.txt2 h1{
+    font-size: 70px;
+    font-family: var(--secondary-text);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+.txt2 p{
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+.txt2 a{
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    i{
+        color: var(--main-color);
+        margin: 0 10px;
+    }
+}
+/* friends */
+.friends{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(./images/Section\ 3\ Background\ Image.png) no-repeat center;
+    background-size: cover;
+}
+.friends::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 0;
+}
+.friends h1{
+    z-index: 1;
+    color: var(--secondary-color);
+    font-size: 100px;
+    font-family: var(--secondary-text);
+    text-transform: uppercase;
+    text-align: center;
+}
+#header-txt{
+    display: inline-block;
+    width: 620px;
+}
+.letter{
+    display: inline-block;
+    opacity: 0;
+}
+.friends a{
+    color: var(--secondary-color);
+    width: 150px;
+    height: 6vh;
+    z-index: 1;
+    background: var(--btns-backcolor);
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+}
+/* try */
+.try{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 170vh;
+}
+.eclips{
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    filter: blur(200px);
+    opacity: 0.4;
+    right: 1000px;
+}
+.try h1{
+    color: var(--secondary-color);
+    font-size: 90px;
+    margin-top: 10px;
+    font-family: var(--secondary-text);
+    text-transform: uppercase;
+    text-align: center;
+}
+.stream1{
+    width: 5000px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    padding: 20px;
+}
+.stream1 .card{
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/Game\ 1\ Image.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+    transition: all 0.3s ease-in-out;
+}
+.stream1 .card:nth-child(2){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/Game\ 2\ Image.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream1 .card:nth-child(3){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/0_Kylian-Mbappes-EA-FC-24-snub-explained.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream1 .card:nth-child(4){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/elden-ring-30.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream1 .card:nth-child(5){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/forza.jpeg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream1 .card:nth-child(6){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/Ghost_of_Tsushima.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream2{
+    width: 5000px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    padding: 20px;
+}
+.stream2 .card{
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/Game\ 1\ Image.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+    transition: all 0.3s ease-in-out;
+}
+.stream2 .card:nth-child(2){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/Game\ 2\ Image.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream2 .card:nth-child(3){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/0_Kylian-Mbappes-EA-FC-24-snub-explained.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream2 .card:nth-child(4){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/elden-ring-30.webp) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream2 .card:nth-child(5){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/forza.jpeg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.stream2 .card:nth-child(6){
+    width: 400px;
+    height: 80%;
+    z-index: 4;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    background: url(/images/Ghost_of_Tsushima.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+}
+.card .stre{
+    width: 100%;
+    height: 8vh;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(60, 60, 60, 0.411);
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.stre h2{
+    font-size: 15px;
+    font-weight: 400;
+}
+.stre .dote{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 50%;
+}
+.try .stream1{
+    position: relative;
+    left: 1300px;
+}
+.try .stream2{
+    position: relative;
+    right: 1500px;
+}
+
+
+/* watch */
+.watch{
+    width: 100%;
+    height: 100vh;
+}
+.watch .imgs{
+    width: 719px;
+    height: 413px;
+    position: relative;
+    left: 500px;
+    top: 200px;
+    display: grid;
+    place-content: center;
+    background: url(/images/Section\ 5\ Video\ Thumbnail.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 11;
+}
+.watch .info{
+    position: relative;
+    width: 615px;
+    height: 160px;
+    bottom: 280px;
+    left: 350px;
+    color: white;
+    z-index: 11;
+}
+.watch .info h1{
+    font-size: 70px;
+    font-family: var(--secondary-text);
+    text-transform: uppercase;
+}
+.watch .iclip1, .watch .iclip2{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.watch .iclip1{
+    width: 300px;
+    height: 300px;
+    bottom: 500px;
+    filter: blur(100px);
+    opacity: 0.2;
+}
+.watch .iclip2{
+    left: 900px;
+    bottom: 600px;
+    z-index: -10;
+    filter: blur(300px);
+    z-index: 10;
+}    
+
+.ytvideo{
+    width: 85%;
+    height: 85%;
+    position: fixed;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 130px;
+    display: none;
+    transform: scale(0.3);
+    transition: 0.3s all ease-in-out;
+    z-index: 100;
+}
+.ytvideo iframe{
+    width: 100%;
+    height: 100%;
+}
+.ytvideo .x{
+    position: fixed;
+    font-size: 30px;
+    right: 50px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* community */
+.community{
+    width: 100%;
+    height: 120vh;
+    background: url(/images/Section\ 6\ Background\ Image.png) no-repeat center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+.community::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.674);
+}
+.con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.community .con h1{
+    color: var(--secondary-color);
+    font-size: 90px;
+    margin-top: 10px;
+    font-family: var(--secondary-text);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 12;
+}
+.community .con a{
+    color: var(--secondary-color);
+    width: 150px;
+    height: 6vh;
+    z-index: 1;
+    background: var(--btns-backcolor);
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    color: var(--secondary-color);
+    justify-content: center;
+    align-items: center;
+}
+footer .priv, footer .copyright{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .priv h4{
+    font-weight: 300;
+}
+footer .copyright{
+    justify-content: end;
+}
+footer .copyright h4{
+    margin-right: 40px;
+    font-weight: 300;
+}
+
+#icons{
+    transform: translateX(550px);
+}
